@@ -1,0 +1,128 @@
+name: 自动下载词典 → 运行脚本 → 发布词库
+
+on:
+  schedule:
+    - cron: '0 4,10,16,22 * * *' # UTC 04:15/10:15/16:15/22:15 = 北京时间 12:15/18:15/00:15/06:15
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 拉取仓库代码
+        uses: actions/checkout@v6
+
+      - name: 下载并解压万象词库
+        run: |
+          mkdir -p input_dicts tmp_extract
+
+          # 1. 下载万象词库压缩包（-f 让 HTTP 404 等错误直接失败）
+          curl -fL "https://github.com/amzxyz/rime-wanxiang-data/releases/download/dict-nightly/dicts.zip" \
+            -o dicts.zip
+
+          # 2. 解压到临时目录（压缩包内为 dicts/ 目录）
+          unzip -q dicts.zip -d tmp_extract
+
+          # 3. 展平：压缩包内的所有词库文件统一移入 input_dicts
+          find tmp_extract -type f \( -name "*.yaml" -o -name "*.yml" -o -name "*.txt" \) \
+            -exec mv -v {} input_dicts/ \;
+
+          # 4. 清理临时文件
+          rm -rf tmp_extract dicts.zip
+
+          echo "input_dicts 中共有 $(ls input_dicts | wc -l) 个词库文件待处理"
+
+      - name: 刷辅助码
+        env:
+          AUX_OUT_ROOT: ${{ runner.temp }}/aux-output
+        run: python aux_go.py
+
+      - name: 提交处理后词库到仓库
+        env:
+          GIT_AUTHOR_NAME: ci-bot
+          GIT_AUTHOR_EMAIL: ci@example.com
+          GIT_COMMITTER_NAME: ci-bot
+          GIT_COMMITTER_EMAIL: ci-bot@example.com
+          AUX_OUT_ROOT: ${{ runner.temp }}/aux-output
+        run: |
+          rm -rf dict
+          mkdir -p dict
+          cp -rf "$AUX_OUT_ROOT"/dicts-pro/* dict/
+
+          git add -A dict
+          if git diff --staged --quiet; then
+            echo "☕ 处理后的词库完全一致，跳过本次提交。"
+          else
+            echo "🚀 检测到处理后词库更新，开始提交变动..."
+            git commit -m "自动更新处理后词库 [ci skip]"
+            git push
+          fi
+
+      - name: 构建并更新词库 release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          LC_ALL: C
+          AUX_OUT_ROOT: ${{ runner.temp }}/aux-output
+        run: |
+          SHA=$(git rev-parse HEAD)
+          NOTES="自动更新自 amzxyz/rime-wanxiang-data dict-nightly。提交：${SHA}。运行时间：$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          CORE_FILES="cuoyin.pro.dict.yaml diming.pro.dict.yaml duoyin.pro.dict.yaml jichu.pro.dict.yaml mingren.pro.dict.yaml zi.pro.dict.yaml"
+
+          rm -rf release
+          mkdir -p release/core release/extra
+
+          for file in $CORE_FILES; do
+            cp "$AUX_OUT_ROOT/dicts-pro/$file" release/core/
+          done
+
+          for file in "$AUX_OUT_ROOT"/dicts-pro/*; do
+            base=$(basename "$file")
+            case " $CORE_FILES " in
+              *" $base "*) ;;
+              *) cp "$file" release/extra/ ;;
+            esac
+          done
+
+          # 固定时间戳并去掉额外属性，保证同样内容生成相同 zip
+          find release/core release/extra -type f -exec touch -t 198001010000 {} +
+          zip -X -j release/core-dicts.zip release/core/*
+          zip -X -j release/extra-dicts.zip release/extra/*
+
+          EXTRA_NOTES="词库扩展包（除核心包以外的词库）。${NOTES}"
+          CORE_NOTES="词库核心包（cuoyin、diming、duoyin、jichu、mingren、zi）。${NOTES}"
+
+          update_release() {
+            tag="$1"
+            asset="$2"
+            title="$3"
+            notes="$4"
+            latest_flag="$5"
+            asset_name=$(basename "$asset")
+
+            existing=$(gh api "repos/${GITHUB_REPOSITORY}/releases/tags/${tag}" \
+              --jq ".assets[] | select(.name==\"${asset_name}\") | .digest" 2>/dev/null || true)
+            new_digest="sha256:$(sha256sum "$asset" | awk '{print $1}')"
+
+            if [ "$existing" = "$new_digest" ]; then
+              echo "${tag}: ${asset_name} 未变化，跳过更新"
+              return 0
+            fi
+
+            if gh release view "$tag" >/dev/null 2>&1; then
+              gh release upload "$tag" "$asset" --clobber
+              gh release edit "$tag" --title "$title" --notes "$notes" $latest_flag
+            else
+              gh release create "$tag" "$asset" \
+                --target "$SHA" \
+                --title "$title" \
+                --notes "$notes" \
+                $latest_flag
+            fi
+          }
+
+          update_release extra-latest release/extra-dicts.zip "词库扩展包" "$EXTRA_NOTES" ""
+          update_release core-latest release/core-dicts.zip "词库核心包" "$CORE_NOTES" "--latest"
