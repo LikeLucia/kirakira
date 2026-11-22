@@ -9,10 +9,8 @@
    - "digit"：数字声调（bā→ba1，lǚ→lv3，er→er5）
    - "mark" ：声调符号（ba1→bā，lv3→lǚ，er5→er）
 3. 按根目录 aux_code.csv 为每个字重新刷辅码，格式：拼音;辅码
-   - aux_code.csv 每字只写一个主码，不再在单元格里写多码
-   - 兼容码（一字多码）在下方 COMPAT_CODES 里维护，输出时追加到主码之后，
-     形如「拼音;主码,兼容码1,兼容码2」
-   - 码表查不到的字：输出空码并打印告警，提示需要补录进 aux_code.csv
+   - 本地码表查不到的字：回退沿用上游词库自带的辅码（保证不丢码）
+   - 同时打印告警日志，提示需要补录进 aux_code.csv 的字
 4. 输出到 output_dicts/dicts-pro/，文件名不含 .pro. 时自动加 .pro 后缀
 5. 黑名单文件（en*、mixed*）与 userdb 格式文件原样复制
 """
@@ -38,18 +36,6 @@ AUX_SEP_REGEX = r'[;\[]'                                  # 辅码起始分隔�
 
 TONE_MODE = os.environ.get("AUX_TONE_MODE", "mark")       # "digit"=数字声调（原行为）；"mark"=声调符号（反向）
 STANDARD_JQXY = True                                      # mark 模式：j/q/x/y 后的 ü 按标准正字法写作 u（jū 而非 jǖ）
-
-# 兼容码：一字多码时，主码写在 aux_code.csv，额外可打的码写在这里。
-# 输出格式为「拼音;主码,码2,码3」，顺序即优先级。主码必须与 CSV 一致。
-COMPAT_CODES = {
-    "丰": ["af", "al"],   # sl,af,al
-    "典": ["cb"],         # qb,cb
-    "未": ["er"],         # aa,er
-    "末": ["er"],         # aa,er
-    "止": ["lu"],         # bl,lu
-    "甩": ["ov", "yv"],   # kv,ov,yv
-    "电": ["yv"],         # ov,yv
-}
 # ──────────────────────────────────────────
 
 CJK_PATTERN = re.compile(
@@ -227,17 +213,18 @@ def load_aux_map(csv_path: str) -> Dict[str, str]:
             cell = row.get(aux_col) or ""
             if not han:
                 continue
-            # 单元格只写主码；多码请写到 COMPAT_CODES
+            # 提取连续字母块，逗号连接（兼容 "abc,de" / "abc de" 等写法）
             blocks = re.findall(r"[a-zA-Z]+", cell)
-            if blocks:
-                aux_map[han] = blocks[0].lower()
+            aux_code = ",".join(b.lower() for b in blocks)
+            if aux_code:
+                aux_map[han] = aux_code
     print(f"✓ 已加载辅码表: {len(aux_map)} 条")
     return aux_map
 
 
 # ---------- 处理单个词库文件 ----------
 def process_dict_file(in_file: str, out_file: str, aux_map: Dict[str, str], sep: str = SEP):
-    missing_chars = set()  # 本文件中不在 aux_code.csv 的字
+    missing_chars = set()  # 本文件中不在 aux_code.csv 且上游也无辅码的字
 
     with open(in_file, "r", encoding="utf-8-sig") as fin, open(
         out_file, "w", encoding="utf-8", newline="\n"
@@ -274,7 +261,7 @@ def process_dict_file(in_file: str, out_file: str, aux_map: Dict[str, str], sep:
                 fout.write(line + "\n")
                 continue
 
-            # 按 TONE_MODE 决定声调转换方向
+            # 保留原始段用于辅码回退；按 TONE_MODE 决定声调转换方向
             raw_segs = col2.split(" ") if col2 else []
             if TONE_MODE == "mark":
                 pinyins = [digit_to_mark(clean_aux_from_seg(py)) for py in raw_segs]
@@ -292,14 +279,13 @@ def process_dict_file(in_file: str, out_file: str, aux_map: Dict[str, str], sep:
             for i, py in enumerate(pinyins):
                 ch = cn_chars[i]
                 aux = aux_map.get(ch, "")
-                if aux:
-                    # 主码 + 兼容码，逗号分隔（与万象词库格式一致）
-                    extra = [c for c in COMPAT_CODES.get(ch, []) if c != aux]
-                    if extra:
-                        aux = ",".join([aux] + extra)
-                else:
-                    # 码表没有这个字：上游词库不带辅码，无法回退，只能置空并告警
-                    missing_chars.add(ch)
+                if not aux:
+                    # 本地码表查不到 → 回退沿用上游已有的辅码
+                    upstream_aux = split_seg(raw_segs[i])[1] if i < len(raw_segs) else ""
+                    if upstream_aux:
+                        aux = upstream_aux
+                    else:
+                        missing_chars.add(ch)
                 # 统一格式：拼音;辅码（辅码为空时保留分号占位）
                 new_cols.append(f"{py}{sep}{aux}")
             fout.write(
@@ -308,7 +294,7 @@ def process_dict_file(in_file: str, out_file: str, aux_map: Dict[str, str], sep:
 
     if missing_chars:
         print(
-            f"⚠ {os.path.basename(in_file)}: 以下字不在 aux_code.csv 中，"
+            f"⚠ {os.path.basename(in_file)}: 以下字不在 aux_code.csv 中且上游无辅码，"
             f"已输出为无辅码（建议补录）：{''.join(sorted(missing_chars))}"
         )
 
