@@ -1,6 +1,7 @@
 # 魔改momo
 
 原版拆分可见：[墨奇码表](https://github.com/gaboolic/moqima-tables)
+
 上游拆分可见：[momo码表](https://github.com/yuanz-12/momo)
 
 ## 主要改动
