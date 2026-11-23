@@ -4715,7 +4715,7 @@ sort: by_weight
 磨牙半切术	mó;gu yá;gp bàn;bf qiè;qd shù;ad	10
 磨牙后三角	mó;gu yá;gp hòu;ik sān;ae jiǎo;dy	10
 目不能远视	mù;ke bù;ab néng;sb yuǎn;zy shì;pj	10
-目常日夕昏	mù;ke cháng;xj rì;ka xī;pd hūn;uo	10
+目常日夕昏	mù;ke cháng;xj rì;oa xī;pd hūn;uo	10
 拇长伸肌腱	mǔ;fm cháng;pn shēn;ru jī;oj jiàn;oy	10
 拇短伸肌腱	mǔ;fm duǎn;ub shēn;ru jī;oj jiàn;oy	10
 目窠上微肿	mù;ke kē;bg shàng;ba wēi;rj zhǒng;ov	10
@@ -5834,10 +5834,10 @@ sort: by_weight
 人质症候群	rén;pn zhì;ib zhèng;bv hòu;ru qún;yy	10
 人质综合征	rén;pn zhì;ib zōng;su hé;rk zhēng;rv	10
 人种药理学	rén;pn zhǒng;hv yào;cu lǐ;wl xué;xz	10
-日光性唇炎	rì;ka guāng;xe xìng;xu chún;ik yán;hh	10
-日光性苔藓	rì;ka guāng;xe xìng;xu tái;ck xiǎn;cy	10
-日光性眼炎	rì;ka guāng;xe xìng;xu yǎn;og yán;hh	10
-日光性紫癜	rì;ka guāng;xe xìng;xu zǐ;vx diàn;bu	10
+日光性唇炎	rì;oa guāng;xe xìng;xu chún;ik yán;hh	10
+日光性苔藓	rì;oa guāng;xe xìng;xu tái;ck xiǎn;cy	10
+日光性眼炎	rì;oa guāng;xe xìng;xu yǎn;og yán;hh	10
+日光性紫癜	rì;oa guāng;xe xìng;xu zǐ;vx diàn;bu	10
 绒毛膜绒毛	róng;su máo;pv mó;od róng;su máo;pv	10
 绒毛取样术	róng;su máo;pv qǔ;ey yàng;ay shù;ad	10
 容貌缺陷感	róng;bg mào;ve quē;fg xiàn;ej gǎn;gx	10
@@ -7462,7 +7462,7 @@ sort: by_weight
 下丘脑前核	xià;ab qiū;ia nǎo;ox qián;bd hé;ar	10
 下丘脑前区	xià;ab qiū;ia nǎo;ox qián;bd qū;kx	10
 下丘脑腺体	xià;ab qiū;ia nǎo;ox xiàn;ou tǐ;rb	10
-夏日沸烂疮	xià;bw rì;ka fèi;df làn;hl chuāng;bv	10
+夏日沸烂疮	xià;bw rì;oa fèi;df làn;hl chuāng;bv	10
 下吻合静脉	xià;ab wěn;kw hé;rk jìng;fy mài;oy	10
 下行传导束	xià;ab xíng;rd chuán;rv dǎo;sc shù;gr	10
 下牙槽动脉	xià;ab yá;gp cáo;ao dòng;yl mài;oy	10
@@ -11089,7 +11089,7 @@ sort: by_weight
 多形核白细胞	duō;xx xíng;kp hé;ar bái;po xì;st bāo;ob	10
 多形性链球菌	duō;xx xíng;kp xìng;xu liàn;ji qiú;wq jūn;ch	10
 多形性模仿菌	duō;xx xíng;kp xìng;xu mó;ad fǎng;rf jūn;ch	10
-多形性日光疹	duō;xx xíng;kp xìng;xu rì;ka guāng;xe zhěn;bp	10
+多形性日光疹	duō;xx xíng;kp xìng;xu rì;oa guāng;xe zhěn;bp	10
 多形性肉芽肿	duō;xx xíng;kp xìng;xu ròu;nr yá;cy zhǒng;ov	10
 多形性脂肪瘤	duō;xx xíng;kp xìng;xu zhī;oo fáng;of liú;bt	10
 多余指切除术	duō;xx yú;rm zhǐ;fo qiē;qd chú;em shù;ad	10
@@ -11105,7 +11105,7 @@ sort: by_weight
 腭肌和咽门肌	è;ok jī;oj hé;hk yàn;ky mén;dv jī;oj	10
 腭卡波西肉瘤	è;ok kǎ;ub bō;dp xī;ak ròu;nr liú;bt	10
 腭裂系列治疗	è;ok liè;dy xì;px liè;dd zhì;dk liáo;bl	10
-呃逆日久不止	è;kv nì;zn rì;ka jiǔ;pn bù;ab zhǐ;bl,lu	10
+呃逆日久不止	è;kv nì;zn rì;oa jiǔ;pn bù;ab zhǐ;bl,lu	10
 额颞叶失智症	é;by niè;ey yè;ku shī;pf zhì;uo zhèng;bv	10
 腭前孔注射法	è;ok qián;bd kǒng;zv zhù;dv shè;uc fǎ;dq	10
 额前叶挫裂伤	é;by qián;bd yè;ku cuò;fr liè;dy shāng;rl	10
@@ -13858,9 +13858,9 @@ sort: by_weight
 妊娠期静脉炎	rèn;nw shēn;ni qī;co jìng;fy mài;oy yán;hh	10
 妊娠期阑尾炎	rèn;nw shēn;ni qī;co lán;mj wěi;um yán;hh	10
 人为性荨麻疹	rén;pn wéi;ld xìng;xu xún;cc má;ga zhěn;bp	10
-日本血吸虫病	rì;ka běn;aa xuè;pm xī;kj chóng;vd bìng;bn	10
-日光性角化病	rì;ka guāng;xe xìng;xu jiǎo;dy huà;rb bìng;bn	10
-日光性荨麻疹	rì;ka guāng;xe xìng;xu xún;cc má;ga zhěn;bp	10
+日本血吸虫病	rì;oa běn;aa xuè;pm xī;kj chóng;vd bìng;bn	10
+日光性角化病	rì;oa guāng;xe xìng;xu jiǎo;dy huà;rb bìng;bn	10
+日光性荨麻疹	rì;oa guāng;xe xìng;xu xún;cc má;ga zhěn;bp	10
 融合肾分解术	róng;gi hé;rk shèn;lo fēn;bd jiě;dn shù;ad	10
 绒毛膜取样术	róng;su máo;pv mó;od qǔ;ey yàng;ay shù;ad	10
 绒毛膜上皮癌	róng;su máo;pv mó;od shàng;ba pí;py ái;bu	10
@@ -15458,7 +15458,7 @@ sort: by_weight
 终末细支气管	zhōng;sd mò;aa,er xì;st zhī;uy qì;pv guǎn;vl	10
 中胚层混合瘤	zhōng;kl pēi;op céng;uy hùn;db hé;rk liú;bt	10
 中胚层性肾瘤	zhōng;kl pēi;op céng;uy xìng;xu shèn;lo liú;bt	10
-中暑和日射病	zhòng;kl shǔ;oo hé;hk rì;ka shè;uc bìng;bn	10
+中暑和日射病	zhòng;kl shǔ;oo hé;hk rì;oa shè;uc bìng;bn	10
 中枢神经系统	zhōng;kl shū;aq shén;pu jīng;sj xì;px tǒng;sy	10
 中心静脉置管	zhōng;kl xīn;dd jìng;fy mài;oy zhì;sq guǎn;vl	10
 重症肌无力症	zhòng;ql zhèng;bv jī;oj wú;ay lì;vp zhèng;bv	10
@@ -15714,7 +15714,7 @@ sort: by_weight
 白化病血小板病	bái;po huà;rb bìng;bn xuè;pm xiǎo;lb bǎn;ay bìng;bn	10
 白介素受体缺陷	bái;po jiè;rl sù;fx shòu;vy tǐ;rb quē;fg xiàn;ej	10
 白内障复明手术	bái;po nèi;kr zhàng;eu fù;pw míng;oo shǒu;pf shù;ad	10
-百日咳合并肺炎	bǎi;ab rì;ka ké;kr hé;rk bìng;bk fèi;oj yán;hh	10
+百日咳合并肺炎	bǎi;ab rì;oa ké;kr hé;rk bìng;bk fèi;oj yán;hh	10
 白色毛结节菌病	bái;po sè;db máo;pv jié;sk jié;ce jūn;ch bìng;bn	10
 白血病性关节病	bái;po xuè;pm bìng;bn xìng;xu guān;bt jié;ce bìng;bn	10
 白质灰质性脑病	bái;po zhì;ib huī;uh zhì;ib xìng;xu nǎo;ox bìng;bn	10
@@ -18724,7 +18724,7 @@ sort: by_weight
 内眦肿物切除术	nèi;kr zì;ob zhǒng;ov wù;nw qiē;qd chú;em shù;ad	10
 内眦赘皮矫正术	nèi;kr zì;ob zhuì;fb pí;py jiǎo;ul zhèng;av shù;ad	10
 内眦赘皮矫治术	nèi;kr zì;ob zhuì;fb pí;py jiǎo;ul zhì;dk shù;ad	10
-泥螺日光性皮炎	ní;db luó;ix rì;ka guāng;xe xìng;xu pí;py yán;hh	10
+泥螺日光性皮炎	ní;db luó;ix rì;oa guāng;xe xìng;xu pí;py yán;hh	10
 逆行泌尿系造影	nì;zn xíng;rd mì;db niào;uu xì;px zào;zk yǐng;op	10
 逆行尿道造影术	nì;zn xíng;rd niào;uu dào;zz zào;zk yǐng;op shù;ad	10
 逆行膀胱造影术	nì;zn xíng;rd páng;of guāng;og zào;zk yǐng;op shù;ad	10
@@ -19321,7 +19321,7 @@ sort: by_weight
 任意皮瓣形成术	rèn;rw yì;lx pí;py bàn;xg xíng;kp chéng;gv shù;ad	10
 人造血管切除术	rén;pn zào;zk xuè;pm guǎn;vl qiē;qd chú;em shù;ad	10
 认知神经心理学	rèn;yr zhī;uk shén;pu jīng;sj xīn;dd lǐ;wl xué;xz	10
-日光性视网膜病	rì;ka guāng;xe xìng;xu shì;pj wǎng;kx mó;od bìng;bn	10
+日光性视网膜病	rì;oa guāng;xe xìng;xu shì;pj wǎng;kx mó;od bìng;bn	10
 溶血尿毒综合征	róng;dg xuè;pm niào;uu dú;fm zōng;su hé;rk zhēng;rv	10
 容易挫伤综合征	róng;bg yì;ow cuò;fr shāng;rl zōng;su hé;rk zhēng;rv	10
 冗余缩写综合征	rǒng;bj yú;rm suō;sb xiě;by zōng;su hé;rk zhēng;rv	10
@@ -20733,7 +20733,7 @@ sort: by_weight
 眼腺利斯特菌病	yǎn;og xiàn;ou lì;hd sī;ct tè;nc jūn;ch bìng;bn	10
 眼腺型土拉菌病	yǎn;og xiàn;ou xíng;kt tǔ;ua lā;fl jūn;ch bìng;bn	10
 岩小神经管裂孔	yán;uu xiǎo;lb shén;pu jīng;sj guǎn;vl liè;dy kǒng;zv	10
-眼压日曲线检查	yǎn;og yā;id rì;ka qū;co xiàn;sj jiǎn;aq chá;ad	10
+眼压日曲线检查	yǎn;og yā;id rì;oa qū;co xiàn;sj jiǎn;aq chá;ad	10
 厌氧菌性败血病	yàn;iq yǎng;qy jūn;ch xìng;xu bài;bw xuè;pm bìng;bn	10
 岩藻糖苷沉积症	yán;uu zǎo;ca táng;mk gān;cg chén;dj jī;hv zhèng;bv	10
 岩藻糖苷贮积病	yán;uu zǎo;ca táng;mk gān;cg zhù;bv jī;hv bìng;bn	10
@@ -21227,7 +21227,7 @@ sort: by_weight
 肢体伤口清创术	zhī;ov tǐ;rb shāng;rl kǒu;la qīng;do chuàng;rd shù;ad	10
 肢体异物取出术	zhī;ov tǐ;rb yì;sc wù;nw qǔ;ey chū;uu shù;ad	10
 植物接触性皮炎	zhí;aq wù;nw jiē;fn chù;di xìng;xu pí;py yán;hh	10
-植物日光性皮炎	zhí;aq wù;nw rì;ka guāng;xe xìng;xu pí;py yán;hh	10
+植物日光性皮炎	zhí;aq wù;nw rì;oa guāng;xe xìng;xu pí;py yán;hh	10
 植物神经紊乱症	zhí;aq wù;nw shén;pu jīng;sj wěn;wx luàn;uv zhèng;bv	10
 植物神经性癫痫	zhí;aq wù;nw shén;pu jīng;sj xìng;xu diān;by xián;ba	10
 致纤维化肺泡炎	zhì;gw xiān;sq wéi;sv huà;rb fèi;oj pào;db yán;hh	10

@@ -227,7 +227,7 @@ sort: by_weight
 拂过	bì;ff guò;zc	406
 粘着	zhān;mv zhe;yo	1677
 当时	dàng;xe shí;to	1103
-当日	dàng;xe rì;ka	7440
+当日	dàng;xe rì;oa	7440
 当年	dàng;xe nián;pf	170745
 当头	dàng;xe tóu;dd	824
 铁骑	tiě;jf qí;mk	1298
@@ -847,7 +847,7 @@ sort: by_weight
 这群	zhèi;zw qún;yy	640
 这让	zhèi;zw ràng;yu	680
 这人	zhèi;zw rén;pn	600
-这日	zhèi;zw rì;ka	390
+这日	zhèi;zw rì;oa	390
 这肉	zhèi;zw ròu;nr	420
 这啥	zhèi;zw shá;kg	390
 这扇	zhèi;zw shàn;hx	480
@@ -1781,7 +1781,7 @@ sort: by_weight
 这几名	zhèi;zw jǐ;pv míng;xk	380
 这几年	zhèi;zw jǐ;pv nián;pf	710
 这几篇	zhèi;zw jǐ;pv piān;vc	360
-这几日	zhèi;zw jǐ;pv rì;ka	500
+这几日	zhèi;zw jǐ;pv rì;oa	500
 这既是	zhèi;zw jì;gw shì;oz	510
 这几首	zhèi;zw jǐ;pv shǒu;bz	380
 这几套	zhèi;zw jǐ;pv tào;dg	320
@@ -1930,7 +1930,7 @@ sort: by_weight
 这两批	zhèi;zw liǎng;ar pī;fb	280
 这两票	zhèi;zw liǎng;ar piào;xu	160
 这两人	zhèi;zw liǎng;ar rén;pn	530
-这两日	zhèi;zw liǎng;ar rì;ka	410
+这两日	zhèi;zw liǎng;ar rì;oa	410
 这两首	zhèi;zw liǎng;ar shǒu;bz	420
 这两双	zhèi;zw liǎng;ar shuāng;yy	260
 这两台	zhèi;zw liǎng;ar tái;sk	430
@@ -2019,7 +2019,7 @@ sort: by_weight
 这让她	zhèi;zw ràng;yu tā;ny	470
 这让我	zhèi;zw ràng;yu wǒ;ga	630
 这人生	zhèi;zw rén;pn shēng;pf	380
-这日子	zhèi;zw rì;ka zi;la	470
+这日子	zhèi;zw rì;oa zi;la	470
 这软件	zhèi;zw ruǎn;iq jiàn;rn	370
 这仨人	zhèi;zw sā;rs rén;pn	280
 这三大	zhèi;zw sān;ae dà;ar	540
@@ -2411,7 +2411,7 @@ sort: by_weight
 这一切	zhèi;zw yí;aa qiè;qd	690
 这一去	zhèi;zw yí;aa qù;ts	380
 这一曲	zhèi;zw yì;aa qǔ;co	320
-这一日	zhèi;zw yí;aa rì;ka	380
+这一日	zhèi;zw yí;aa rì;oa	380
 这一身	zhèi;zw yì;aa shēn;zc	480
 这一生	zhèi;zw yì;aa shēng;pf	580
 这已是	zhèi;zw yǐ;kv shì;oz	500
@@ -2536,7 +2536,7 @@ sort: by_weight
 这周六	zhèi;zw zhōu;kk liù;wb	390
 这周末	zhèi;zw zhōu;kk mò;aa,er	490
 这周内	zhèi;zw zhōu;kk nà;kr	240
-这周日	zhèi;zw zhōu;kk rì;ka	340
+这周日	zhèi;zw zhōu;kk rì;oa	340
 这周三	zhèi;zw zhōu;kk sān;ae	290
 这周四	zhèi;zw zhōu;kk sì;oe	280
 这周天	zhèi;zw zhōu;kk tiān;ad	170
@@ -3582,7 +3582,7 @@ sort: by_weight
 谁上班	shéi;yv shàng;ba bān;wl	140
 谁审核	shéi;yv shěn;bu hé;ar	250
 谁生病	shéi;yv shēng;pf bìng;bn	210
-谁生日	shéi;yv shēng;pf rì;ka	210
+谁生日	shéi;yv shēng;pf rì;oa	210
 谁是爹	shéi;yv shì;oz diē;fx	190
 谁是狗	shéi;yv shì;oz gǒu;qj	280
 谁是谁	shéi;yv shì;oz shéi;yv	470
@@ -4397,7 +4397,7 @@ sort: by_weight
 这谁做的	zhè;zw shéi;yv zuò;rw de;bu	1
 争道谁家	zhēng;dy dào;zz shéi;yv jiā;bu	8
 指的是谁	zhǐ;fo de;bu shì;oz shéi;yv	1
-终日谁来	zhōng;sd rì;ka shéi;yv lái;aa	11
+终日谁来	zhōng;sd rì;oa shéi;yv lái;aa	11
 周幽谁诛	zhōu;kk yōu;uy shéi;yv zhū;yw	6
 主人是谁	zhǔ;wt rén;pn shì;oz shéi;yv	38
 赚谁的钱	zhuàn;bj shéi;yv de;bu qián;jj	39
@@ -4501,7 +4501,7 @@ sort: by_weight
 两个犬	liǎng;ar gè;rl quǎn;dd	660
 两个夋	liǎng;ar gè;rl qūn;sw	817
 两个人	liǎng;ar gè;rl rén;pn	52094
-两个日	liǎng;ar gè;rl rì;ka	817
+两个日	liǎng;ar gè;rl rì;oa	817
 两个入	liǎng;ar gè;rl rù;pn	1
 两个卅	liǎng;ar gè;rl sà;ai	1
 两个山	liǎng;ar gè;rl shān;kl	655
@@ -4646,7 +4646,7 @@ sort: by_weight
 三个全	sān;ae gè;rl quán;rw	398
 三个𡿨	sān;ae gè;rl quǎn;vv	368
 三个人	sān;ae gè;rl rén;pn	13095
-三个日	sān;ae gè;rl rì;ka	601
+三个日	sān;ae gè;rl rì;oa	601
 三个若	sān;ae gè;rl ruò;ck	1
 三个山	sān;ae gè;rl shān;kl	466
 三个少	sān;ae gè;rl shǎo;xp	1
@@ -4697,7 +4697,7 @@ sort: by_weight
 三个𠙽	sān;ae gè;rl zhì;	604
 三个𦉼	sān;ae gè;rl zhì;	574
 四个曰	sì;oe gè;rl yuē;oa	4614
-四个日	sì;oe gè;rl rì;ka	1
+四个日	sì;oe gè;rl rì;oa	1
 三个𣥚	sān;ae gè;rl zhì;	544
 三个至	sān;ae gè;rl zhì;gt	514
 三个丶	sān;ae gè;rl zhǔ;dd	1105
@@ -4732,7 +4732,7 @@ sort: by_weight
 四个且	sì;oe gè;rl qiě;oa	1
 四个囚	sì;oe gè;rl qiú;or	610
 四个泉	sì;oe gè;rl quán;bu	1082
-四个日	sì;oe gè;rl rì;ka	1
+四个日	sì;oe gè;rl rì;oa	1
 四个石	sì;oe gè;rl shí;ak	520
 四个水	sì;oe gè;rl shuǐ;ln	1
 四个厶	sì;oe gè;rl sī;vd	552
