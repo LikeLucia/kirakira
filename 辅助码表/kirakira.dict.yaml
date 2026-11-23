@@ -7087,9 +7087,9 @@ sort: by_weight
 嗲	diǎ;kx	571
 𪦕	diǎ;nx	4
 点	diǎn;vh	349309
-电	diàn;ov,yv	34986
+电	diàn;ov	34986
 店	diàn;gv	34286
-典	diǎn;qb,cb	2916
+典	diǎn;qb	2916
 殿	diàn;uu	2177
 垫	diàn;ft	2068
 淀	diàn;dz	675
@@ -9464,7 +9464,7 @@ sort: by_weight
 𩿈	fēn;fn	1
 𫔃	fén;jj	1
 风	fēng;jx	27384
-丰	fēng;sl,af,al	3240
+丰	fēng;sl	3240
 封	fēng;tc	3175
 峰	fēng;uf	2624
 锋	fēng;jf	2278
@@ -23639,7 +23639,7 @@ sort: by_weight
 码	mǎ;um	11972
 妈	mā;nm	11732
 麻	má;ga	4104
-嘛	ma;kl	3898
+嘛	ma;ml	3898
 玛	mǎ;wm	729
 骂	mà;xm	692
 吗	má;km	570
@@ -23674,7 +23674,7 @@ sort: by_weight
 傌	mà;rm	68
 鰢	mǎ;ym	50
 杩	mǎ;am	33
-嘛	má;kl	23
+嘛	má;ml	23
 遤	mǎ;zm	23
 閁	mà;mp	1
 禡	mà;pm	1
@@ -25232,7 +25232,7 @@ sort: by_weight
 繆	miù;sp	19
 𨱯	miǔ;ex	4
 模	mó;ad	9247
-末	mò;aa,er	2740
+末	mò;aa	2740
 魔	mó;gg	2466
 摩	mó;gu	2219
 莫	mò;cd	1997
@@ -31352,7 +31352,7 @@ sort: by_weight
 𧹈	réng;bd	1
 𨸐	réng;en	1
 𪥠	réng;bd	1
-日	rì;ka	316273
+日	rì;oa	316273
 鈤	rì;jo	39534
 驲	rì;mo	8323
 囸	rì;ov	8156
@@ -33960,7 +33960,7 @@ sort: by_weight
 衰	shuāi;yv	2880
 率	shuài;wu	2822
 摔	shuāi;fu	2765
-甩	shuǎi;kv,ov,yv	2709
+甩	shuǎi;yv	2709
 蟀	shuài;iu	925
 缞	shuāi;sv	363
 帥	shuài;pj	105
@@ -37735,7 +37735,7 @@ sort: by_weight
 𪴸	wǎng;vb	1
 为	wèi;ld	963744
 为	wéi;ld	944469
-未	wèi;aa,er	93080
+未	wèi;aa	93080
 位	wèi;rl	91218
 味	wèi;kw	10496
 微	wēi;rj	9971
@@ -48640,7 +48640,7 @@ sort: by_weight
 致	zhì;gw	1814
 置	zhì;sq	1810
 职	zhí;ev	1333
-止	zhǐ;bl,lu	1317
+止	zhǐ;lb	1317
 志	zhì;tx	1305
 织	zhī;sv	902
 执	zhí;fw	901
