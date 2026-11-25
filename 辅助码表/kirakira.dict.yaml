@@ -18530,6 +18530,7 @@ sort: by_weight
 懏	jùn;xk	38
 攈	jùn;fh	38
 銁	jūn;jo	38
+鋆	jūn;tj	35
 筠	jūn;vy	28
 陖	jùn;ew	23
 葰	jùn;cw	20
@@ -26069,7 +26070,6 @@ sort: by_weight
 浽	něi;dn	1
 餧	něi;un	1
 㐻	nèi;rn	1
-㖏	nèi;kt	1
 㘨	nèi;tn	1
 㨅	nèi;fn	1
 㼏	něi;vg	1
@@ -26482,6 +26482,7 @@ sort: by_weight
 齧	niè;fr	113
 糱	niè;cm	97
 帇	niè;yj	92
+㖏	niè;kt	91
 躡	niè;ze	87
 囁	niè;ke	82
 顳	niè;ey	82
@@ -31352,7 +31353,7 @@ sort: by_weight
 𧹈	réng;bd	1
 𨸐	réng;en	1
 𪥠	réng;bd	1
-日	rì;ka	316273
+日	rì;oa	316273
 鈤	rì;jo	39534
 驲	rì;mo	8323
 囸	rì;ov	8156
@@ -33079,7 +33080,7 @@ sort: by_weight
 𫐃	shēn;it	1
 𫞪	shèn;gx	1
 生	shēng;pf	27101
-省	shěng;uo	11773
+省	shěng;uo,xo	11773
 升	shēng;pc	6316
 声	shēng;tu	6189
 胜	shèng;ou	4668
@@ -41042,7 +41043,7 @@ sort: by_weight
 刑	xíng;kd	985
 杏	xìng;ak	823
 腥	xīng;ou	771
-省	xǐng;uo	600
+省	xǐng;uo,xo	600
 猩	xīng;qu	558
 邢	xíng;ke	546
 惺	xīng;xu	483
